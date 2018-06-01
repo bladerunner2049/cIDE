@@ -1,0 +1,33 @@
+{
+  "name": "cide",
+  "version": "0.0.1",
+  "description": "Cloud IDE",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "xo"
+  },
+  "author": "Dmytryk Dmytro",
+  "license": "ISC",
+  "xo": {
+    "space": 2,
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "ignores": [
+      "dist/**"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^2.0.2",
+    "xo": "^0.20.3"
+  },
+  "dependencies": {
+    "electron-prebuilt": "^1.4.13",
+    "jquery": "^3.3.1",
+    "modclean": "^3.0.0-beta.1",
+    "npm": "^6.0.1",
+    "smalltalk": "^3.0.0"
+  }
+}

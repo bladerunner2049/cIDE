@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>CIDE v.0.0.1</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+   <!-- <div class="main_menu>" -->
+    <header>
+      <ul id="main_menu">
+          <li class="menu_item"><a href=""><img src="images/file.png" width="30px" height="30px" alt="new file"></a></li>
+          <li class="menu_item"><a href=""><img src="images/save.png" width="30px" height="30px" alt="Зберегти" onclick="saveFile()"></a></li>
+          <li class="menu_item"><a href=""><img src="images/open.png" width="30px" height="30px" alt="Open" onclick="openFile()"></a></li>
+          <!--<li style="float: left;list-style-type: none;"><a href=""><img src="images/createsub.png" width="30px" height="30px" alt="Зкомпілювати" onclick="pycom()"></a></li>-->
+          <li class="menu_item">
+              <!--<form ="lang_selector_form">-->
+                <select id="lang_selector">
+                  <option disabled>Виберіть мову</option>
+                  <option value="1">C++</option>
+                  <option value="2">Pascal</option>
+                  <option value="3">Perl</option>
+                  <option value="4">Python</option>
+                  <option value="5">Fortran</option>
+                  <option value="6">Whitespace</option>
+                  <option value="7">Ada</option>
+                  <option value="8">Ocaml</option>
+                  <option value="9">Intercal</option>
+                  <option value="10">Java</option>
+                  <option value="11">C</option>
+                  <option value="12">Brainf**k</option>
+                  <option value="13">Assembler</option>
+                  <option value="14">CLIPS</option>
+                  <option value="15">Prolog (swi)</option>
+                  <option value="16">Icon</option>
+                  <option value="17">Ruby</option>
+                  <option value="18">Scheme</option>
+                  <option value="19">Pike</option>
+                  <option value="20">D</option>
+                  <option value="21">Haskell</option>
+                  <option value="22">Pascal (fpc)</option>
+                  <option value="23">Smalltalk</option>
+                  <option value="25">Nice</option>
+                  <option value="26">Lua</option>
+                  <option value="27">C#</option>
+                  <option value="28">Bash</option>
+                  <option value="29">PHP</option>
+                  <option value="30">Nemerle</option>
+                  <option value="31">Common Lisp</option>
+                  <option value="32">Common Lisp (clisp)</option>
+                  <option value="33">Scheme (guile)</option>
+                  <option value="34">C99 strict</option>
+                  <option value="35">JavaScript (rhino)</option>
+                  <option value="36">Erlang</option>
+                  <option value="38">Tcl</option>
+                  <option value="39">Scala</option>
+                  <option value="40">SQL</option>
+                  <option value="41">C++ 4.3.2</option>
+                  <option value="42">Assembler 64bit</option>
+                  <option value="43">Objective-C</option>
+                  <option value="44">C++14</option>
+                  <option value="45">Assembler</option>
+                  <option value="46">Sed</option>
+                  <option value="47">Kotlin</option>
+                  <option value="50">VB.NET</option>
+                  <option value="54">Perl 6</option>
+                  <option value="55">Java7</option>
+                  <option value="56">Node.js  </option>
+                  <option value="85">Swift</option>
+                  <option value="93">Rust</option>
+                  <option value="97">Scheme</option>
+                  <option value="98">Gosu</option>
+                  <option value="99">Python (Pypy)  </option>
+                  <option value="102">D </option>
+                  <option value="104">AWK (gawk)</option>
+                  <option value="105">AWK</option>
+                  <option value="106">COBOL 85</option>
+                  <option value="107">Forth</option>
+                  <option value="108">Prolog</option>
+                  <option value="110">bc</option>
+                  <option value="111">Clojure</option>
+                  <option value="112">JavaScript (spidermonkey) </option>
+                  <option value="114">Go</option>
+                  <option value="116">Python 3</option>
+                  <option value="117">R</option>
+                  <option value="118">COBOL</option>
+                  <option value="121">Groovy</option>
+                  <option value="124">F#</option>
+                  <option value="127">Octave</option>
+                </select>
+              <!--</form>-->
+           </li>
+          <li class="menu_item"><a href=""><img src="images/run.png" width="30px" height="30px" alt="Get answer" onclick="work()"></a></li>
+          <!--<li style="float: left;list-style-type: none;"><a href=""><img src="images/test.png" width="30px" height="30px" alt="Test" onclick="test()"></a></li>
+          <li style="float: left;list-style-type: none;"><a><img src="images/exit.png" width="30px" height="30px" alt="Вихід"></a></li>-->
+      </ul>
+    </header>
+   <div align="left" >
+    <pre id="codearea"></pre>
+   </div>
+   <div contenteditable="false" id="output">
+    <!--<script>test()</script>-->
+   </div>
+   <p>
+    <textarea id="input" rows="auto" cols="auto" wrap="soft"></textarea>
+   </p>
+  <!-- Connecting engine.js script -->
+   <script src="engine.js"></script>
+   <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    start_editor();
+  </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+#codearea {
+	/*border-left: 10px;
+	border-right: 20px;
+	min-width:370px;*/ 
+	width: 97.65% ;
+	height: 60%; 
+	resize: none; 
+	background-color: #264040; 
+	color: white;
+	position: absolute; 
+	top: 9%;  
+	bottom: 25%;
+}
+
+#output {
+	background-color: white;
+	 min-width:370px; 
+	 width: 97.65% ; 
+	 height: 20%; 
+	 resize: none; 
+	 position: absolute; 
+	 top: 71%; 
+	 bottom: 5%; 
+	 font-family: monospace; 
+}
+
+#input {
+	min-width:370px; 
+	width: 97%; 
+	top: 92%; 
+	resize: none; 
+	position: absolute;
+}
+
+#main_menu {
+	overflow: hidden; 
+	padding: 0; 
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	width: 100%;
+}
+
+.menu_item {
+	float: left; 
+	list-style-type: none;
+}
+
+body {
+	background-color: #006666;
+}
